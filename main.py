@@ -2,10 +2,10 @@ import psycopg2
 from json import loads
 
 with open('./.secrets.json', 'r') as f:
-  secretsss = loads(f.read())
+  secrets = loads(f.read())
 
 ended = False
-db = psycopg2.connect(database=secretsss['db'], user=secretsss['user'], password=secretsss['password'])
+db = psycopg2.connect(database=secrets['db'], user=secrets['user'], password=secrets['password'])
 
 main_menu_text = '''
 **********************************
