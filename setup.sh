@@ -2,7 +2,7 @@
 # sudo apt update
 # sudo apt upgrade
 echo 'Installing dependencies'
-sudo apt install postgresql postgresql-client python3 git
+sudo apt install postgresql python3 git
 sudo useradd -m phoneboy
 echo 'phoneboy
 phoneboy' | sudo passwd phoneboy

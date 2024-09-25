@@ -1,6 +1,7 @@
 echo 'Cloning repository to phoneboys home directory'
 cd
 git clone https://github.com/averieyy/telephonecat.git
+cd telephonecat
 echo '{
   "db": "telephone",
   "user": "phoneboy",
