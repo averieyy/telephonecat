@@ -1,6 +1,6 @@
-# echo 'apt upgrade and apt update'
-# sudo apt update
-# sudo apt upgrade
+echo 'apt upgrade and apt update'
+sudo apt update
+sudo apt upgrade
 echo 'Installing dependencies'
 sudo apt install postgresql python3 git
 sudo useradd -m phoneboy
