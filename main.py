@@ -100,7 +100,7 @@ def main_menu():
     elif action == '2': search()
     elif action == '3': remove()
     elif action == '4': edit()
-    elif action == '5' or action == '': ended = True
+    else: ended = True
   db.commit()
 
 if __name__ == '__main__':
