@@ -11,4 +11,6 @@ CREATE DATABASE telephone;
 GRANT ALL ON DATABASE telephone TO phoneboy;" | sudo -u postgres psql
 echo 'GRANT ALL ON SCHEMA public TO phoneboy;' | sudo -u postgres psql telephone
 sudo -u phoneboy sh ./setupproject.sh
-sudo -u phoneboy python3 /home/phoneboy/telephonecat/main.py
+su phoneboy
+cd ~/telephonecat/
+python3 main.py
