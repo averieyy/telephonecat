@@ -29,14 +29,36 @@ git clone https://github.com/averieyy/telephonecat.git
 cd telephonecat
 ```
 
+#### setup.sh
+
 Run the setup script by running
 
 ```sh
 sh ./setup.sh
 ```
 
-Finally, run main.py with the user phoneboy
+The script does the following:
+
+- Update installed packages (```sudo apt update && sudo apt upgrade```)
+- Install the dependencies the phone catalog needs (postgres, python, git)
+- Adds a user, "phoneboy"
+  - The default password is "phoneboy". You can change this later by running
+    
+    ```
+    sudo passwd phoneboy
+    ```
+- Sets up the postgres database
+  - Creates a database "telephone"
+  - Grants all priviliges on said database to phoneboy
+- Clones the repository in /home/phoneboy.
+- Creates the table "people" in the database.
+
+## Running the program
+
+Assuming the program was set up correctly, you can run the following in the terminal to run it.
 
 ```sh
-sudo -u phoneboy python3 main.py
+sudo su phoneboy
+cd ~/telephonecat
+python3 main.py
 ```
