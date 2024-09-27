@@ -69,3 +69,44 @@ sudo su phoneboy
 cd ~/telephonecat
 python3 main.py
 ```
+
+## General advice
+
+This guide does not go over some important parts of setting up a server.
+
+The following tips can be important for setting up a server.
+
+<details>
+<summary>SSH server</summary>
+<br>
+
+To set up an ssh (secure shell) server, you first need the ```openssh``` package.
+
+```sh
+sudo apt install openssh
+```
+
+Then, we need to start the server. In some cases, this has alreay been done at installation, but if not, run
+```sh
+sudo systemctl start sshd.service  # Start the server
+sudo systemctl enable sshd.service # Set the server to autostart on boot
+```
+
+By default, The ssh server allows people to authenticate through username+password, but this leaves the server exposed to brute force attacks. A safer way to authenticate is through public key authentication.
+
+On your PC, run ```ssh-keygen``` to create a new key. Remember its location for later.
+
+Before you can copy the key over, you need to know the IP address of the server. you can do this by running 
+```ip a```
+
+You should now copy the __public__ key over to the server. __NEVER SHARE YOUR PRIVATE KEY__,
+
+### Linux
+
+To copy the key, run
+
+```sh
+ssh-copy-id -i <the key file location> <user>@<ip address>
+```
+
+</details>

@@ -22,9 +22,4 @@ echo '
 |                                     |
 +-------------------------------------+
 
-Oh, and the other parts of the computer
-is also functional now.
-
-:)
-
 '
