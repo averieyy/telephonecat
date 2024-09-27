@@ -44,8 +44,15 @@ The script does the following:
 - Adds a user, "phoneboy"
   - The default password is "phoneboy". You can change this later by running
     
-    ```
+    ```sh
     sudo passwd phoneboy
+    ```
+    You should also change the password in postgres.
+    ```sh
+    sudo -u postgres psql
+    ```
+    ```sql
+    ALTER USER phoneboy password '<new password>';
     ```
 - Sets up the postgres database
   - Creates a database "telephone"
