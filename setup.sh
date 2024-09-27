@@ -1,8 +1,8 @@
 echo 'apt upgrade and apt update'
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 echo 'Installing dependencies'
-sudo apt install postgresql python3 git python3-psycopg2
+sudo apt install postgresql python3 git python3-psycopg2 -y
 sudo useradd -m phoneboy
 echo 'phoneboy
 phoneboy' | sudo passwd phoneboy
