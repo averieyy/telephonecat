@@ -14,6 +14,13 @@ Download the [Raspberry Pi imager](https://www.raspberrypi.com/software/) softwa
 
 Download Ubuntu Server LTS (currently version 24) (64-bit) onto the Raspberry Pi's SD card using the Raspberry Pi imager. Remember to create a user and set up an internet connection in the installer by clicking the **Edit settings** button. You should also add a public key, so you can connect to the Raspberry Pi over ssh.
 
+This is my configuration:
+
+<img src="assets/first_screen.jpg" alt="First screen of the RPI configuration" title="First screen of the RPI configuration" width="300">
+<img src="assets/ssh_setup.jpg" alt="SSH setup screen" title="SSH setup screen" width="300">
+<img src="assets/final_screen.jpg" alt="First screen of the RPI configuration" title="First screen of the RPI configuration" width="300">
+
+<br>
 When you are booted into the system, install git by running
 
 ```sh
